@@ -2,9 +2,11 @@ class Control:
     def __init__(self):
         self.tv = None
 
+    def getTv(self):
+        return self.tv
+
     def setTv(self, tv):
         self.tv = tv
-        tv.setControl(self)
 
     def turnOn(self):
         if self.tv is not None:
@@ -37,3 +39,7 @@ class Control:
     def setVolumen(self, volumen):
         if self.tv is not None:
             self.tv.setVolumen(volumen)
+
+    def enlazar(self, tv):
+        self.tv = tv
+        tv.setControl(self)
