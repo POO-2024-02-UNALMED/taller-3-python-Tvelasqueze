@@ -69,3 +69,9 @@ class TV:
 
         else:
             pass
+
+    def turnOn(self):
+        self.__estado = True
+
+    def turnOff(self):
+        self.__estado = False
